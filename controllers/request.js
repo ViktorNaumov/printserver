@@ -1,6 +1,10 @@
+const { requestprinter } = require("../requestprinter")
 
 
 
 module.exports.request = function(req,res){
-    console.log(req.body)
+    requestprinter(req.body.value, (report)=>{
+        console.log(report)
+    })
+    
 }

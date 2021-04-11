@@ -18,7 +18,7 @@ app.use(function (req, res, next) {
   });
 
 
-  app.use("/api", requestRouts);
+  app.use("/api/set", requestRouts);
 
 
 
