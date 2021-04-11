@@ -19,7 +19,7 @@ exports.filemaker = (requests, path, arr) => {
               (err) => {
                 if (err) console.log(err);
                 else {
-                  console.log("File " + update + "_test.dxf" + " written");
+                  console.log("записано");
                 }
               }
             );

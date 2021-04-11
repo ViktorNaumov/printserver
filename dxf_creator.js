@@ -4,7 +4,7 @@ module.exports.DxfCreator = function (type, param,func) {
   switch (type) {
     case "rec":
       let rec_start = fs
-        .readFileSync("./snipets/rec_start.dxf", "utf8")
+        .readFileSync("snipets/rec_start.dxf", "utf8")
         .split("+");
       let rec_end = fs.readFileSync("./snipets/rec_end.dxf", "utf8").split("+");
       let rec_body_string =

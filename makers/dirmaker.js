@@ -13,21 +13,18 @@ exports.dirmaker = (requests, request, path) => {
   console.log(result);
 
   let Path = "./requests/Заявка №" + request;
-  
 
   if (fs.existsSync(Path)) {
-    path(Path,result);
+    path(Path, result);
   } else {
     fs.mkdirSync(Path);
-    path(Path,result);
+    path(Path, result);
   }
-  for(let i =0 ;i < result.length; i++){
-    let PathSp ="./requests/Заявка №" + request+"/Спецификация № "+result[i];
-    if(!fs.existsSync()){
-        fs.mkdirSync(PathSp);
+  for (let i = 0; i < result.length; i++) {
+    let PathSp =
+      "./requests/Заявка №" + request + "/Спецификация № " + result[i];
+    if (!fs.existsSync(PathSp)) {
+      fs.mkdirSync(PathSp);
     }
-    
   }
-  
-  
 };
